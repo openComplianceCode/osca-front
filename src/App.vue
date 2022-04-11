@@ -18,21 +18,6 @@ import BaseSubheading from "./components/base/Subheading.vue";
 import BaseVComponent from "./components/base/VComponent.vue";
 
 export default {
-  name: "App",
-  components: {
-    BaseCard,
-    BaseItem,
-    BaseItemGroup,
-    BaseItemSubGroup,
-    BaseMaterialAlert,
-    BaseMaterialCard,
-    BaseMaterialChartCard,
-    BaseMaterialSnackbar,
-    BaseMaterialStatsCard,
-    BaseMaterialTabs,
-    BaseMaterialTestimony,
-    BaseSubheading,
-    BaseVComponent,
-  },
+  name: "App"
 };
 </script>

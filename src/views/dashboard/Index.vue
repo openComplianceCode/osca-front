@@ -1,8 +1,7 @@
 <template>
   <v-app>
-    <dashboard-core-app-bar />
-
     <dashboard-core-drawer />
+    <dashboard-core-app-bar value="true" />
 
     <dashboard-core-view />
   </v-app>

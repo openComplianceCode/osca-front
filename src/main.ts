@@ -28,6 +28,7 @@ loadFonts();
 const vueApp = createApp(App);
 
 vueApp.use(vuetify).use(router).use(i18n).use(store).mount("#app");
+
 vueApp.component("BaseCard", BaseCard);
 vueApp.component("BaseItem", BaseItem);
 vueApp.component("BaseItemGroup", BaseItemGroup);

@@ -13,31 +13,30 @@
 </template>
 
 <script>
-  // Mixins
-  import Proxyable from 'vuetify/lib/mixins/proxyable'
+// Mixins
 
-  export default {
-    name: 'MaterialTabs',
+export default {
+  name: "MaterialTabs",
 
-    mixins: [Proxyable],
+  mixins: [],
 
-    props: {
-      color: {
-        type: String,
-        default: 'primary',
-      },
+  props: {
+    color: {
+      type: String,
+      default: "primary",
     },
-  }
+  },
+};
 </script>
 
 <style lang="sass">
-  .v-tabs--pill
+.v-tabs--pill
+  .v-tab,
+  .v-tab:before
+    border-radius: 24px
+
+  &.v-tabs--icons-and-text
     .v-tab,
     .v-tab:before
-      border-radius: 24px
-
-    &.v-tabs--icons-and-text
-      .v-tab,
-      .v-tab:before
-        border-radius: 4px
+      border-radius: 4px
 </style>

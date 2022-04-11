@@ -162,6 +162,8 @@ export default {
   .v-locale--is-ltr &
     @content
 
+
+
 #core-navigation-drawer
   .v-list-group__header.v-list-item--active:before
     opacity: .24

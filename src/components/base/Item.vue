@@ -5,12 +5,9 @@
     :target="href && href !== '#' ? '_blank' : undefined"
     :to="item.to"
     :active-class="`primary ${!isDark ? 'black' : 'white'}--text`"
+    :prepend-icon="item.icon"
+    :title="item.title"
   >
-    <v-list-item-content v-if="item.title || item.subtitle">
-      <v-list-item-title v-text="item.title" />
-
-      <v-list-item-subtitle v-text="item.subtitle" />
-    </v-list-item-content>
   </v-list-item>
 </template>
 
@@ -55,3 +52,5 @@ export default {
   },
 };
 </script>
+
+<style lang="sass"></style>

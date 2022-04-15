@@ -11,7 +11,7 @@
   >
     <v-divider class="mb-1" />
 
-    <v-list color="transparent" nav>
+    <!-- <v-list color="transparent" nav>
       <v-list-item>
         <v-list-item-avatar class="align-self-center" contain>
           <v-img
@@ -24,32 +24,55 @@
           <v-list-item-title class="display-1" v-text="profile.title" />
         </v-list-item-content>
       </v-list-item>
-    </v-list>
+    </v-list> -->
+    <div class="row-item-center padding-15">
+      <img src="https://demos.creative-tim.com/vuetify-material-dashboard/favicon.ico" class="round-img" style="flex: 0 0" />
+      <span style="flex: 1 1">Vuetify MD</span>
+    </div>
+    
 
-    <v-divider class="mb-2" />
+    <v-divider class="mb-2 v-divider theme--dark" />
 
     <v-list color="transparent" nav>
       <!-- Style cascading bug  -->
       <!-- https://github.com/vuetifyjs/vuetify/pull/8574 -->
       <div />
 
-      <template v-for="(item, i) in computedItems">
+      <!-- <template v-for="(item, i) in computedItems">
         <base-item-group v-if="item.children" :key="`group-${i}`" :item="item">
-          <!--  -->
         </base-item-group>
 
-        <base-item v-else :key="`item-${i}`" :item="item" />
-      </template>
+        <base-item v-else :key="`item-${i}`" :item="item" active-color="success"/>
+      </template> -->
 
       <!-- Style cascading bug  -->
       <!-- https://github.com/vuetifyjs/vuetify/pull/8574 -->
       <div />
     </v-list>
-    <v-list nav color="transparent">
+
+    <v-list nav style="padding: 15px">
+      <template v-for="(item, i) in computedItems" :key="`group-${i}`">
+        <v-list-item
+          nav
+          :prepend-icon="item.icon"
+          :title="item.title"
+          :value="item.title"
+          rounded="l"
+          active-color="success"
+          color="white"
+          style="user-select:none"
+        >
+        </v-list-item>
+      </template>
+    </v-list>
+
+    <!-- <v-list nav style="padding: 15px">
       <v-list-item
         prepend-icon="mdi-email"
         title="Inbox"
         value="inbox"
+        rounded="l"
+        active-color="success"
       ></v-list-item>
       <v-list-item
         prepend-icon="mdi-account-supervisor-circle"
@@ -61,7 +84,7 @@
         title="Clock-in"
         value="clockin"
       ></v-list-item>
-    </v-list>
+    </v-list> -->
 
     <template v-slot:append>
       <base-item
@@ -162,4 +185,19 @@ export default {
 };
 </script>
 
-<style lang="sass"></style>
+<style scoped>
+.round-img {
+   background-color: white;
+   border-radius: 50%;
+   max-height: 40px;
+   margin-right: 15px;
+}
+.row-item-center {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.padding-15 {
+  padding: 15px 25px;
+}
+</style>

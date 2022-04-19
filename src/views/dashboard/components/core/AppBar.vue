@@ -111,7 +111,7 @@ export default {
       "Another Notification",
       "Another one",
     ],
-    isExpanded: true,
+    isExpanded: false,
   }),
 
   computed: {

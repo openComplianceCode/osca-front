@@ -24,10 +24,23 @@ import BaseSubheading from "./components/base/Subheading.vue";
 import BaseVComponent from "./components/base/VComponent.vue";
 
 loadFonts();
+import { ApolloClient, DefaultOptions, InMemoryCache } from '@apollo/client/core'
 
+const cache = new InMemoryCache()
+//var defaultOptions: WatchQueryFetchPolicy = "cache-and-network"
+const apolloClient = new ApolloClient({
+  cache,
+  uri: 'http://localhost:3000/graphql',
+  // 不使用缓存，每次都重新取
+  defaultOptions: <DefaultOptions>"network-only",
+})
+import { createApolloProvider } from '@vue/apollo-option'
+const apolloProvider = createApolloProvider({
+    defaultClient: apolloClient,
+})
 const vueApp = createApp(App);
 
-vueApp.use(vuetify).use(router).use(i18n).use(store).mount("#app");
+vueApp.use(vuetify).use(router).use(apolloProvider).use(i18n).use(store).mount("#app");
 
 vueApp.component("BaseCard", BaseCard);
 vueApp.component("BaseItem", BaseItem);

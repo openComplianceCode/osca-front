@@ -9,11 +9,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@apollo/client": "^3.5.10",
     "@mdi/font": "5.9.55",
     "@types/lodash": "^4.14.181",
+    "@vue/apollo-option": "^4.0.0-alpha.16",
+    "graphql": "^16.3.0",
+    "graphql-tag": "^2.12.6",
+    "jsonpath": "^1.1.1",
     "lodash": "^4.17.21",
     "roboto-fontface": "*",
-    "vue": "^3.2.25",
+    "vue": "3.2.30",
     "vue-i18n": "9",
     "vue-router": "4",
     "vuetify": "^3.0.0-beta.0",
